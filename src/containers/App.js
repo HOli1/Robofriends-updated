@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundery from '../components/ErrorBoundery';
+import Header from '../components/Header';
 import './App.css';
 
 import {setSearchField, requestRobots} from '../actions.js'
@@ -48,14 +49,14 @@ class App extends Component {
 			const {searchField, onSearchChange, robots, isPending} = this.props;
 			const filteredRobots = robots.filter(robot => {
 				return robot.name.toLowerCase().includes(searchField)
-			});
+			});	
 
 			if (robots.length === 0) {
 				return <h1 className='tc'> LOADING </h1>
 			} else {
 				return (
 					<div className='tc'>
-						<h1 className='f1'> RoboFriends </h1>
+						<Header />
 						<SearchBox searchChange={onSearchChange} />
 						<Scroll>
 							<ErrorBoundery>
