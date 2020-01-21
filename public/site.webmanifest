@@ -1,6 +1,6 @@
 {
-    "name": "Robo",
-    "short_name": "Robo PWA",
+    "name": "Robo PWA",
+    "short_name": "Robo",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
